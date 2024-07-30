@@ -15,15 +15,18 @@ camera.position.z = 2;
 const scene = new THREE.Scene();
 
 const geo = new THREE.IcosahedronGeometry(1.0,2);
-const mat = new THREE.MeshBasicMaterial(
+const mat = new THREE.MeshStandardMaterial(
     {
-        color: 0xccff
+        color: 0xccff,
+        flatShading: true
     });
 const mesh = new THREE.Mesh(geo,mat);
 scene.add(mesh);
-
+const hemiLight = new THREE.HemisphereLight(0xffffff,0x000000);
+scene.add(hemiLight);
 function animate(t=0)
 {
+    console.log(t);
     requestAnimationFrame(animate);
     mesh.scale.setScalar(Math.cos(t*0.001)+1);
     renderer.render(scene, camera);
