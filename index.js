@@ -31,7 +31,7 @@ const wireMat = new THREE.MeshBasicMaterial({
 const wireMesh = new THREE.Mesh(geo, wireMat);
 scene.add(wireMesh); // Add wireMesh directly to the scene
 
-const hemiLight = new THREE.HemisphereLight(0xffffff, 0x000000, 1); // Adjust light intensity
+const hemiLight = new THREE.HemisphereLight(0x0099ff, 0xaa5500); // Adjust light intensity
 scene.add(hemiLight);
 
 const pointLight = new THREE.PointLight(0xffffff, 1, 100); // Add a point light for better shading
