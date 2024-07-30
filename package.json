@@ -11,5 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "three-orbitcontrols": "^2.110.3"
-  }
+  },
+  "devDependencies": {}
 }
